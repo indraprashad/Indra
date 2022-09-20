@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRIDS</title>
+    <script src="https://kit.fontawesome.com/c4c97a9702.js" crossorigin="anonymous"></script>
+    <style>
+        *
+        {margin: 0px;
+        padding: 0px;
+    box-sizing: border-box;}
+        .box{
+            border: none;
+            width: 98%;
+            height: 740px;
+            margin: 10px auto;
+            color:white;
+            display: grid;
+            grid-template-rows: 42px 200px 300px 107px;
+            grid-template-columns: repeat(3,1fr) 250px;
+            grid-gap:20px;
+
+        }
+        .box p{
+            font-size: 30px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin: 0px 1%;
+        }
+        .div1{
+            background-color: blue;
+            grid-column: 1/-1;
+        }
+        .div1 ul{
+          display: inline-flex;
+          text-decoration: none;;
+          color: wheat;
+          list-style: none;
+          width: 45.9%;
+          height: 39px;
+          margin: 10px 0%;
+          float: right;
+          margin: -26px;
+        }
+        .div1 a{
+          text-decoration: none;
+          font-size: 20px;
+          color: wheat;
+        }
+        .div1 a.active{
+            background-color: #04AA6D;
+            color: white;
+        }
+        .div1 ul li a:hover{
+            background-color: white;
+            color: black;
+        }
+        .div1 ul li a{
+            padding: 10px 20px;
+        }
+        .div2{
+            background-color: #1e90ff;
+        }
+        .div2 img{
+            height: 200px;
+            width: 340px;
+        }
+        .div3{
+            background-color: #1e90ff;
+        }
+        .div3 img{
+            height: 200px;
+            width: 340px;
+        }
+        .div4{
+            background-color: rgb(122, 113, 113);
+            text-align: center;
+            font-weight: bold;
+            font-size: large;
+            box-shadow: 3px 6px 9px;
+            background:rgb(34, 113, 231)url("https://adtu.in/assets/images/study_at_adtu-2.webp");
+            background-size: cover;
+            background-blend-mode: darken;
+}
+.div4 p{
+    font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.animated-element {
+    border-bottom: 5px solid #f7aa4a;
+}
+.animated-element span::after {
+    color: #ffffff;
+    border-right: 2px solid white;
+    animation:typing 1.5s backwards;
+}
+@keyframes typing{
+100%{
+    width: 100%;
+}
+}
+.div4 button{
+    float: left;
+    margin: 10px;
+    height: 30px;
+    border-color: rgba(255, 166, 0, 0.932);
+    background: transparent;
+    color: orange;
+    cursor: pointer;
+    font-size: medium;
+}
+.div4 button:hover{
+    background-color: orange;
+    color: black;
+}
+        .div5{
+            background-color: #00d2d3;
+            grid-row: 2/4;
+            grid-column: 4/5;
+        }
+        .div6{
+            background-color: #dbab53;
+            grid-column: 1/4;
+        }
+        .div7{
+            background-color: #2f3542;
+            grid-column: 1/-1;
+        }
+        .div7 p{
+            font-size: 20px;
+            font-family:sans-serif;
+            margin: 82px 30%;
+        }
+        .div7 p a{
+            color: orange;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .div7 fa{
+            color: white;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="div1">
+            <p>Bhutanese students in Assam Down Town University</p>
+            <ul>
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#"></i>Students</a></li>
+                <li><a href="#">Scholarship</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Course</a></li>
+                </u1>
+        </div>
+        <div class="div2">
+            <img src="https://akm-img-a-in.tosshub.com/lingo/itne/images/story/202206/whatsapp-image-2021-05-24-at-11.47.59-am.jpeg?size=1200:675">
+        </div>
+        <div class="div3">
+            <img src="https://theknowledgereview.com/wp-content/uploads/2019/09/Assam-down-town-University11.jpg">
+        </div>
+        <div class="div4">
+            WELCOME TO ASSAM DOWN TOWN UNIVERSITY
+            <p>North East India's No #1 placement driven University</p>
+            <span class="animated-element" data-word1="60+ Programmes" data-word2=" Affordable Fees"  data-word3=" 8000+ Students" data-word4="250+ Faculties"  data-word5="5000+ Placements"  data-speed="50" data-words="5"> 60+ Programm</span>
+            <br><br><br>
+            <button>I want to study</button>
+            <button>I want to do research</button>
+        </div>
+        <div class="div5">Fee Structure</div>
+        <div class="div6">news and updates</div>
+        <div class="div7">
+            <p>Copyright Indra Adhikari | Developed By <b><a href="https://www.facebook.com/indra.sharma.79827">Indra Adhikari</a></b></p>
+            <i class="fa-brands fa-facebook"></i>
+        </div>
+    </div>
+</body>
+</html>
