@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bsi-Adtu</title>
+    <link rel="icon" type="image/x-icon" href="./images/download.png">
+    <script src="https://kit.fontawesome.com/c4c97a9702.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+header{
+  background-color: green;
+  color: white;
+  font-family: comic sans ms;
+  margin:0px 13px;
+  text-align: center;
+  -webkit-text-stroke: 0.3px white;
+  overflow: hidden;
+}
+header img{
+  float: left;
+  margin: 1px 1%;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.box{
+  width: 98%;
+  margin: 0px auto;
+  color:white;
+  display: grid;
+  grid-template-rows: 42px;
+  grid-gap:15px;
+}
+.box p{
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 0px 1%;
+}
+body{
+    background-color: white;
+    overflow: auto;
+}
+#course th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+/*------------------NAVBAR-----------------*/
+.div1{
+  background-color: blue;
+  grid-column: 1/-1;
+}
+.topnav {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: black;
+}
+        
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav button{
+  float: right;
+  background-color: #0000FF;
+  color: white;
+  font-size: 20px;
+  display: block;
+  padding: 13px 13px;
+  height: 42px;
+  cursor: pointer;
+}
+.topnav button a{
+  margin: -13px;
+}
+.topnav button a:hover{
+  color: red;
+}
+        
+.topnav a:hover{
+  text-decoration: none;
+}
+.topnav a.active {
+  background-color: rgb(73, 230, 73);
+  color: white;
+}
+        
+.topnav .icon {
+  display: none;
+}
+        
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+        
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+        
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 112px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 0;
+  margin: 0px 0%;
+}
+        
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+        
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: green;
+  color: white;
+}
+        
+.dropdown-content a:hover {
+  background-color: black;
+  color: white;
+}
+        
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+        
+@media screen and (max-width: 600px) {
+.topnav a:not(:first-child), .dropdown .dropbtn {
+  display: none;
+}
+.topnav a.icon {
+  float: right;
+  display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+.topnav.responsive {position: relative;}
+.topnav.responsive .icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.topnav.responsive a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+.topnav.responsive .dropdown {float: none;}
+.topnav.responsive .dropdown-content {position: relative;}
+.topnav.responsive .dropdown .dropbtn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  }
+}
+#course {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+#course td, #course th {
+  border: 1px solid black;
+  padding: 8px;
+  color: black;
+  text-align: justify;
+}
+#course tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+#course tr:hover {
+    background-color: #ddd;
+}
+
+
+/*-------------------------------------FOOTER---------------------------------*/
+.footer{
+  width: 98%;
+  height: 30px;
+  background-color: green;
+  margin: -5px 1%;
+  font-family: comic sans ms;
+}
+.footer h3{
+  text-align: center;
+  margin: 0px 25%;
+  color: white;
+}
+.footer b{
+  color: orange;
+  cursor: pointer;
+}
+</style>
+<body>
+  <header>
+    <img src="./images/flag.jpg" style="width:50px; height: 50px;">
+    <h2>Bhutanese student in Assam Down Town University</h2>
+    <p>Panikhati, Guwahati-26</p>
+  </header>
+    <!-------------------------------------------------------------NAVBAR-------------------------------------------------------------->
+    <div class="box">
+        <div class="topnav" id="myTopnav">
+            <a href="index.html" class="active">Home</a>
+            <a href="students.html">Students</a>
+            <div class="dropdown">
+                <button id="myBtn" class="dropbtn">Contact</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">International Affair</a>
+                    <a href="#">RBCG</a>
+                    <a href="#">President</a>
+                    <a href="#">Vice-President</a>
+                    <a href="students.html">Other Students</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button id="myBtn" class="dropbtn">Scholarship</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="https://www.indembthimphu.gov.in/pages.php?id=102">Ambassador's Scholarship</a>
+                </div>
+            </div>
+            <a href="course.html">Course</a>
+            <button><a href="sign-up.html">Sign up</a></button>
+            <button><a href="signin.html">Sign in</a></button>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+        <!-----------------------------------------------END OF NAVBAR------------------------------------------------------------->
+
+        <table id="course">
+            <tr>
+                <th style="text-align: center;">S/No</th>
+                <th style="text-align: center;">Course</th>
+                <th style="text-align: center;">Duration</th>
+                <th style="text-align: center;">Total Fee</th>
+            </tr>
+
+            <tr>
+                <td colspan="4" style="text-align: center;">MASTER DEGREE</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Master of Business Administration in Healthcare Management</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Master of Science in Food Nutrition and Dietetics</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Master of Medical Laboratory Technology</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Master of Arts in Applied Psychology</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Master of Science in Microbiology</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>6</td>
+                <td>Master of Physiotherapy</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>7</td>
+                <td>Master of Arts in Sociology</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>8</td>
+                <td>Master of Science in Zoology</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>9</td>
+                <td>Master of Business Administration</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>10</td>
+                <td>Master of Science in Clinical Psychology</td>
+                <td></td>
+                <td></td>
+            </tr> 
+            
+            <tr>
+                <td>11</td>
+                <td>Master of Science in Biotechnology</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>12</td>
+                <td>Master of Business Administration (Industry Integrated)</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>13</td>
+                <td>Master of Social Work</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>14</td>
+                <td>Master of Pharmacy</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>15</td>
+                <td>Master of Business Administration on Business Analytics</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>16</td>
+                <td>Master of Science in Botany</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>17</td>
+                <td>M.Sc. Nursing</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td colspan="4" style="text-align: center;">DEGREE</td>
+            </tr>
+
+            <tr>
+                <td>18</td>
+                <td>B.Tech. in Civil Engineering</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>19</td>
+                <td>Bachelor of Dialysis Technology</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>20</td>
+                <td>Bachelor of Social Work</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>21</td>
+                <td>B.Tech. in Computer Science and Engineering</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>22</td>
+                <td>Bachelor of Medical Laboratory Technology</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>23</td>
+                <td>Bachelor of Science in Biotechnology</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>24</td>
+                <td>B.Tech. in Mechanical Engineering</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>25</td>
+                <td>Bachelor of Operation Theatre Technology</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>26</td>
+                <td>Bachelor of Science in Food Nutrition and Dietetics</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>27</td>
+                <td>B.Tech. in Computer Science and Engineering on Cloud Technology and Information Security
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>28</td>
+                <td>Bachelor of Radiography and Advance Imaging Technology</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>29</td>
+                <td>Bachelor of Science in Microbiology
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>30</td>
+                <td>Bachelor of Computer Application
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>31</td>
+                <td>Bachelor of Trauma, Emergency and Disaster Management</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>32</td>
+                <td>Bachelor of Science in Actuarial Science</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>33</td>
+                <td>Bachelor of Computer Application on Cloud Technology and Information Security</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>34</td>
+                <td>Bachelor of Hotel Management and Catering Technology</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>35</td>
+                <td>Bachelor of Science in Forensic Science</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>36</td>
+                <td>Bachelor of Computer Application on Artificial Intelligence and Machine Learning</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>37</td>
+                <td>Bachelor of Business Administration</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>38</td>
+                <td>Bachelor of Pharmacy</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>39</td>
+                <td>Bachelor of Science in Information Technology</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>40</td>
+                <td>Bachelor of Business Administration (Industry Integrated)</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>41</td>
+                <td>Bachelor of Pharmacy Practice</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>42</td>
+                <td>Bachelor of Optometry</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>43</td>
+                <td>Bachelor of Arts in Performing Arts</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>44</td>
+                <td>B.Sc. Nursing</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>45</td>
+                <td>Bachelor of Physiotherapy</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>46</td>
+                <td>Bachelor of Arts in Psychology</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>47</td>
+                <td>Post Basic B.Sc. Nursing</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>48</td>
+                <td>Bachelor of Critical and Intensive Care Technology</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>49</td>
+                <td>Bachelor of Arts in Sociology</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td colspan="4" style="text-align: center;">DIPLOMA</td>
+            </tr>
+
+            <tr>
+                <td>50</td>
+                <td>Diploma in Pharmacy</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>51</td>
+                <td>Three Years Diploma in Paramedical Science</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>52</td>
+                <td>Two Years Diploma in Radio - Imaging Technology</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>53</td>
+                <td>General Nursing Midwifery</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>54</td>
+                <td>Two Years Diploma in Dialysis Technology
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>55</td>
+                <td>Post Graduate Diploma in Psychological Counselling</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>56</td>
+                <td>Auxiliary Nursing Midwifery</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>57</td>
+                <td>Two Years Diploma in Medical Laboratory Technology
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>58</td>
+                <td>Diploma in Computer Application</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td colspan="4" style="text-align: center;">CERTIFICATE</td>
+            </tr>
+
+            <tr>
+                <td>59</td>
+                <td>Certificate Course in Yoga Education (Level 2)</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>60</td>
+                <td>Certificate Course in Effective Behavior at Workplace</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>61</td>
+                <td>Certificate Course in Psychotherapy and Psychosocial Interventions</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>62</td>
+                <td>Certificate Course in Bakery & Confectionery</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>63</td>
+                <td>Certificate Course in Electrical and Electronic</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>64</td>
+                <td>Certificate Course in Sports and Fitness Nutrition</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>65</td>
+                <td>Certificate Course in Data Science and Business Analytics</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>66</td>
+                <td>Certificate Course in Functional Trainer</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>67</td>
+                <td>Certificate Course in Understanding Human Strengths</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>68</td>
+                <td>Certificate Course in Digital Marketing</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>69</td>
+                <td>Certificate Course in Mental Health At Workplace</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>70</td>
+                <td>Certificate Course in Yoga Education (Level 1)</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <!-------------------------------FOOTER------------------------------------------->
+    <div class="footer">
+        <h3>
+            Copyright &copy; 2022 by <b>Indra Adhikari </b>
+        </h3>
+    </div>
+
+    <!---------------------------------------------------------------JAVASCRIPT------------------------------------------------------------>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+    <link rel="icon" type="image/x-icon" href="./images/download.png">
+    <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+    <script src="https://kit.fontawesome.com/c4c97a9702.js" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+</head>
+<style>
+  header{
+  background-color: green;
+  color: white;
+  font-family: comic sans ms;
+  margin:0px 13px;
+  text-align: center;
+  -webkit-text-stroke: 0.3px white;
+  overflow: hidden;
+  padding: 0px;
+}
+header img{
+  float: left;
+  margin: 20px 1%;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.student {
+  margin: 10px;
+  padding: 10px;
+  background-color: #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 245px;
+  width: 200px;
+}
+.icon {
+  margin: 10px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer
+}
+canvas {
+  height: 100px;
+  width: 100px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-radius: 50%;
+  margin: 5px 23%;
+}
+p {
+  font-size: 12pt;
+  color: black;
+  text-align: center;
+  margin: 0px;
+}
+img{
+  width: 200px;
+  height: 20px;
+}
+h5{
+  text-align: center;
+  margin: 0px;
+}
+h5 a{
+  color: black;
+  font-size: 13px;
+  margin: 0px 3%;
+}
+h5 a:hover{
+  color: blue;
+}
+.abc{
+  background-color: black;
+  width: 110%;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: white;
+  margin: 0px 12%;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+.input{
+  text-align: center;
+  width: 100%;
+  margin: 0px 0%;
+}
+</style>
+<body style="background: url(./images/endless\ knot\ background.jpeg);">
+  <header>
+    <img src="./images/flag.jpg" style="width:50px; height: 50px;">
+<h2>Bhutanese student in Assam Down Town University</h2>
+<p>Panikhati, Guwahati-26</p>
+</header>
+  <a href="index.html" style="color:black;margin: 0px 1%;">Home</a>
+    <div class="container">
+        <div class="student">
+            <canvas id= "canv1" ></canvas>
+            <p>INDRA  ADHIKARI</p>
+            <img src="https://openclipart.org/image/800px/310415">
+            <h5>Bachelor of Computer Application</h5>
+            <h5><a href="https://mail.google.com/mail/u/0/#compose"><i>indraprashadsharma4@gmail.com</i></a></h5>
+            <h5>Third (3<sup><i>rd</i></sup>) Semester</h5>
+            <div class="abc" style="margin: 24px -10px;">
+                <a href="https://wa.me/7002052968"><i class="fa-brands fa-whatsapp"></i></a> 
+                <a href="https://www.facebook.com/indra.sharma.79827"><i class="fa fa-facebook"></i></a>  
+                <a href="https://www.instagram.com/its_me_indra_adhikari/"><i class="fa-brands fa-instagram"></i></a> 
+            </div>
+            <div class="image-upload">
+            <label for="finput">
+              <i class="fa-solid fa-camera" style="transform: translateY(-200px);margin: 0px 62%;cursor: pointer;"></i>
+            </label>
+            <input type="file" accept="image/*" id=finput onchange="upload()" style="display:none;" />
+            </div> 
+      </div>
+
+        <div class="student" id="indra">
+            <canvas id= "canv2" ></canvas>
+            <div class="input" contenteditable="true">Enter your name here</div>
+            <img src="https://openclipart.org/image/800px/310415">
+            <div class="input" contenteditable="true">Course</div>
+            <div class="input" contenteditable="true"><h5><a href="https://mail.google.com/mail/u/0/#compose"><i>Email</i></a></h5></div>
+            <div class="input" contenteditable="true">Semester</div>
+            <div class="abc" style="margin: 24px -10px;">
+                <a href="https://wa.me/7002052968"><i class="fa-brands fa-whatsapp"></i></a> 
+                <a href="https://www.facebook.com/indra.sharma.79827"><i class="fa fa-facebook"></i></a>  
+                <a href="https://www.instagram.com/its_me_indra_adhikari/"><i class="fa-brands fa-instagram"></i></a> 
+            </div>
+            <div class="image-upload">
+                <label for="finput1">
+                  <i class="fa-solid fa-camera" style="transform: translateY(-200px);margin: 0px 62%;cursor: pointer;"></i>
+                </label>
+                <input type="file" accept="image/*" id=finput1 onchange="upload1()" style="display:none;" />
+                </div>
+        </div>
+        <button class="icon" onclick="addNewStudent()">+</button>
+    </div>
+    
+    <script>
+    function addNewStudent(){
+        const button = document.querySelector('button.icon');
+        const studentDiv = document.createElement('div');
+        var newel = $('.student:last').clone();
+        $(newel).insertAfter(".student:last");
+        button.insertAdjacentElement('beforebegin', studentDiv);
+    }
+    
+    function upload(){
+        var imgcanvas = document.getElementById("canv1");
+        var fileinput = document.getElementById("finput");
+        var image = new SimpleImage(fileinput);
+        image.drawTo(imgcanvas);
+    }
+
+    function upload1(){
+        var imgcanvas = document.getElementById("canv2");
+        var fileinput = document.getElementById("finput1");
+        var image = new SimpleImage(fileinput);
+        $( ".indra" ).each (function(){
+            $(this).finput1({
+                showButtonPanel: true
+            })
+          });
+        image.drawTo(imgcanvas);
+    }
+    </script>
+</body>
+</html>

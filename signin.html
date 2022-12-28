@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="icon" type="image/x-icon" href="./images/download.png">
+    <script src="https://kit.fontawesome.com/c4c97a9702.js" crossorigin="anonymous"></script>
+</head>
+<style>
+.login-container{
+  border: none;
+  width: 30%;
+  height: 505px;
+  transform: translatex(90%);
+  margin: 80px;
+  overflow-y: fixed;
+  overflow-x: fixed;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.login-container h1{
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 0px;
+}
+.login-container img{
+  width: 50px;
+  height: 50px;
+  margin: 5px 45%;
+}
+.login-container form, input[type=text],input[type=password]{
+  margin: 0px 10%;
+  width: 80%;
+  height: 35px;
+  outline: none;
+}
+.login-container form .btn{
+  background-color: #0571ed;
+  border: none;
+  height: 35px;
+  width: 20%;
+  margin: 0px 2.88%;
+}
+.login-container form input{
+  margin: 0px 10%;
+  width: 100%;
+  height: 35px;
+  outline: none;
+}
+.login-container p{
+  margin: 0px 10%;
+  font-family: Italic sans-serif;
+}
+.login-container .login-button{
+  width: 80%;
+  height: 35px;
+  text-align: center;
+  color: white;
+  background-color: red;
+  margin: 10px 10%;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.login-container h3{
+  text-align: center;
+}
+.login-container .optional1{
+  width: 80%;
+  height: 35px;
+  text-align: center;
+  color: white;
+  background-color: #0571ed;
+  margin: 10px 10%;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.login-container .optional2{
+  width: 80%;
+  height: 35px;
+  text-align: center;
+  color: white;
+  background-color: #0571ed;
+  margin: 10px 10%;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.login-container h6{
+  text-align: center;
+}
+.login-container h6 a{
+  color: #000;
+}
+
+
+</style>
+<body>
+    <div class="login-container">
+        <img src="https://dynaroof.com/wp-content/uploads/2017/05/dwntwn-uni.jpg">
+        <h1>Welcome to ADTU</h1>
+        <input type="text" placeholder="Email " required><br><br>
+        <input type="password" placeholder="Passwords" required>
+        <p>Forgot your password?</p>
+        <button class="login-button" type="submit">Login</button>
+        <h3>OR</h3>
+        <button class="optional1"><i class="fa-brands fa-facebook"></i> Continue with facebook</button><br>
+        <button class="optional2"><i class="fa-brands fa-google"></i> Continue with google</button>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>

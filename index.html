@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bsi-Adtu</title>
+    <link rel="icon" type="image/x-icon" href="./images/download.png">
+    <script src="https://kit.fontawesome.com/c4c97a9702.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+header{
+  background-color: green;
+  color: white;
+  font-family: comic sans ms;
+  margin:0px 13px;
+  text-align: center;
+  -webkit-text-stroke: 0.3px white;
+  overflow: hidden;
+}
+header img{
+  float: left;
+  margin: 1px 1%;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.box{
+  width: 98%;
+  margin: 0px auto;
+  color:white;
+  display: grid;
+  grid-template-rows: 42px;
+  grid-gap:15px;
+  overflow: hidden;
+  border:  grey;
+  box-shadow: 0 4px 8px 0 rgba(34, 27, 27, 0.2)
+}
+.box p{
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 0px 1%;
+}
+body{
+  background-color: #efefef;
+  overflow: hidden;
+}
+
+/*------------------NAVBAR-----------------*/
+.div1{
+  background-color: blue;
+  grid-column: 1/-1;
+}
+.topnav {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: black;
+}
+        
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav button{
+  float: right;
+  background-color: #0000FF;
+  color: white;
+  font-size: 20px;
+  display: block;
+  padding: 13px 13px;
+  height: 42px;
+  cursor: pointer;
+}
+.topnav button a{
+  margin: -13px;
+}
+.topnav button a:hover{
+  color: red;
+}
+        
+.topnav a:hover{
+  text-decoration: none;
+}
+.topnav a.active {
+  background-color: rgb(73, 230, 73);
+  color: white;
+}
+        
+.topnav .icon {
+  display: none;
+}
+        
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+        
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+        
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 112px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin: 0px 0%;
+}
+        
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+        
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: green;
+  color: white;
+}
+        
+.dropdown-content a:hover {
+  background-color: black;
+  color: white;
+}
+        
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+        
+@media screen and (max-width: 600px) {
+.topnav a:not(:first-child), .dropdown .dropbtn {
+  display: none;
+}
+.topnav a.icon {
+  float: right;
+  display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+.topnav.responsive {position: relative;}
+.topnav.responsive .icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.topnav.responsive a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+.topnav.responsive .dropdown {float: none;}
+.topnav.responsive .dropdown-content {position: relative;}
+.topnav.responsive .dropdown .dropbtn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  }
+}
+
+/*-------------------------------------------------------------LEFT SIDEBAR----------------------------------------------------*/
+.left-sidebar{
+  background-color: #efefef;
+  border: 1px solid black;
+  float: left;
+  width: 300px;
+  height: 498px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.left-sidebar h1{
+  text-align: center;
+  color: black;
+  background-color: #16A085;
+  width: 100%;
+  height: 50px;
+  display: block;
+  margin: 0px;
+  border-radius: 0px 0px 0px 0px;
+  overflow: hidden;
+}
+.Navigation-btn{
+  border: none;
+  width: 100%;
+  height: 500px;
+  margin: 0px 0%;
+  background-color: white;
+  cursor: pointer;
+  overflow: auto;
+  animation: primary 3s linear infinite;
+  padding: 0px 0px 20px 0px;
+}
+.notice{
+  background-color: white;
+  height: 45px;
+  color: black;
+}
+.notice:nth-child(even){
+    background-color: #f2f2f2;
+}
+.notice b{
+  color: black;
+}
+.notice p{
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+.active, .notice:hover {
+  box-shadow: #444 0 0 0px !important;
+  border-width: 0px 0px 0px 4px !important;
+  background-color: #666;
+  color: white;
+}
+.notice1{
+  background-color: #efefef;
+  height: 45px;
+  color: black;
+}
+.notice1 b{
+  color: black;
+}
+.notice1 p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border-top: 1px solid grey;
+}
+.active, .notice1:hover {
+  box-shadow: #444 0 0 0px !important;
+  border-width: 0px 0px 0px 4px !important;
+  background-color: #666;
+  color: white;
+}
+.notice2{
+  background-color: white;
+  height: 45px;
+  color: black;
+}
+.notice2 b{
+  color: black;
+}
+.notice2 p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border-top: 1px solid grey;
+}
+.active, .notice2:hover {
+  box-shadow: #444 0 0 0px !important;
+  border-width: 0px 0px 0px 4px !important;
+  background-color: #666;
+  color: white;
+ }
+.notice3{
+  background-color: #efefef;
+  height: 45px;
+  color: black;
+}
+.notice3 b{
+  color: black;
+}
+.notice3 p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border-top: 1px solid grey;
+}
+.active, .notice3:hover {
+  box-shadow: #444 0 0 0px !important;
+  border-width: 0px 0px 0px 4px !important;
+  background-color: #666;
+  color: white;
+}
+.notice4{
+  background-color: white;
+  height: 45px;
+  color: black;
+}
+.notice4 b{
+  color: black;
+}
+.notice4 p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border-top: 1px solid grey;
+}
+.active, .notice4:hover {
+  box-shadow: #444 0 0 0px !important;
+  border-width: 0px 0px 0px 4px !important;
+  background-color: #666;
+  color: white;
+}
+.notice5{
+  background-color: #efefef;
+  height: 45px;
+  color: black;
+}
+.notice5 b{
+  color: black;
+}
+.notice5 p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border-top: 1px solid grey;
+}
+.active, .notice5:hover {
+  box-shadow: #444 0 0 0px !important;
+  border-width: 0px 0px 0px 4px !important;
+  background-color: #666;
+  color: white;
+}
+.notice6{
+  background-color: white;
+  height: 45px;
+  color: black;
+}
+.notice6:hover {
+  box-shadow: #444 0 0 0px !important;
+  border-width: 0px 0px 0px 4px !important;
+  background-color: #666;
+  color: white;
+}
+.notice6 b{
+  color: black;
+}
+.notice6 p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border-top: 1px solid grey;
+}
+.active, .notice6:hover {
+  box-shadow: #444 0 0 0px !important;
+  border-width: 0px 0px 0px 4px !important;
+  background-color: #666;
+  color: white;
+}
+.notice7{
+  background-color: #efefef;
+  height: 45px;
+  color: black;
+}
+.notice7 b{
+  color: black;
+}
+.notice7 p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border-top: 1px solid grey;
+}
+.active, .notice7:hover {
+  box-shadow: #444 0 0 0px !important;
+  border-width: 0px 0px 0px 4px !important;
+  background-color: #666;
+  color: white;
+}
+.notice8{
+  background-color: white;
+  height: 45px;
+  color: black;
+}
+.notice8 b{
+  color: black;
+}
+.notice8 p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border-top: 1px solid grey;
+}
+.active, .notice8:hover {
+  box-shadow: #444 0 0 0px !important;
+  border-width: 0px 0px 0px 4px !important;
+  background-color: #666;
+  color: white;
+}
+.notice9{
+  background-color: #efefef;
+  height: 47px;
+  color: black;
+}
+.notice9 b{
+  color: black;
+}
+.notice9 p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border-top: 1px solid grey;
+}
+.active, .notice9:hover {
+  box-shadow: #444 0 0 0px !important;
+  border-width: 0px 0px 0px 4px !important;
+  background-color: #666;
+  color: white;
+}
+.notice10{
+  background-color: white;
+  height: 47px;
+  color: black;
+}
+.notice10 b{
+  color: black;
+}
+.notice10 p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border-top: 1px solid grey;
+}
+.active, .notice10:hover {
+  box-shadow: #444 0 0 0px !important;
+  border-width: 0px 0px 0px 4px !important;
+  background-color: #666;
+  color: white;
+}
+.notice11{
+  background-color: #efefef;
+  height: 47px;
+  color: black;
+}
+.notice11 b{
+  color: black;
+}
+.notice11 p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border-top: 1px solid grey;
+}
+.active, .notice11:hover {
+  box-shadow: #444 0 0 0px !important;
+  border-width: 0px 0px 0px 4px !important;
+  background-color: #666;
+  color: white;
+}
+.notice12{
+  background-color: white;
+  height: 47px;
+  color: black;
+}
+.notice12 b{
+  color: black;
+}
+.notice12 p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border-top: 1px solid grey;
+}
+.active, .notice12:hover {
+  box-shadow: #444 0 0 0px !important;
+  border-width: 0px 0px 0px 4px !important;
+  background-color: #666;
+  color: white;
+}
+.scroll-parent {
+  position: relative;
+  width: 100%;
+  height: 30rem;
+  overflow-x: hidden;
+  background-color: white;
+}
+
+.scroll-element {
+  width:100%;
+  height: inherit;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  animation: primary 3s linear infinite;
+}
+.secondary {
+  animation: secondary 3s linear infinite;
+}
+
+@keyframes secondary {
+  from {
+    top: 0%;
+  }
+  to {
+    top: -10%;
+  }
+}
+::-webkit-scrollbar .Navigation-btn{
+  display: none;
+}
+/*-------------------------------------------------------------HIDEING THE SCROLLING BAR----------------------------------------------*/
+::-webkit-scrollbar{
+  display: none;
+}
+
+/*-------------------------------------------------------------MAIN CONTENT----------------------------------------------*/
+.main-content{
+  background-color: none;
+  margin: -512px 31%;
+  width: 500px;
+  height: 498px;
+  display: block;
+  overflow: auto;
+  box-shadow: none;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+.main-content h2{
+  background-color: white;
+  text-align: center;
+  color: #0000FF;
+  border-radius: 10px 10px 0px 0px;
+  height: 50px;
+}
+.main-content h2 i{
+  margin: 1px -15%;
+}
+.main-content hr{
+  border: 1px solid #0000FF;
+  width: 88%;
+  margin: 0px 6%;
+}
+::selection{
+  color: #fff;
+  background: #1a81ff;
+}
+.container{
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 0px 0px 5px 5px;
+  transition: height 0.2s ease;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+.container.active{
+  height: 550px;
+}
+.container .wrapper{
+  width: 100%;
+  display: flex;
+}
+.container .wrapper section{
+  width: 100%;
+  background: #fff;
+  margin: -15px 0%;
+  height: 250px;
+}
+.container img{
+  cursor: pointer;
+}
+.container .post{
+  transition: margin-left 0.18s ease;
+}
+.container.active .post{
+  margin-left: -500px;
+}
+.post form{
+  margin: 20px 25px;
+}
+.post form .content, .list li .column{
+  display: flex;
+  align-items: center;
+}
+.post form .content img{
+  cursor: default;
+  max-width: 40px;
+  border-radius: 50%;
+}
+.post form .content .details{
+  margin: -3px 0 0 12px;
+}
+form .content .details p{
+  font-size: 17px;
+  font-weight: 500;
+  color: black;
+}
+.content .details .privacy{
+  display: flex;
+  height: 18px;
+  cursor: pointer;
+  padding: 0 10px;
+  font-size: 11px;
+  margin-top: 3px;
+  border-radius: 5px;
+  align-items: center;
+  max-width: 98px;
+  background: #E4E6EB;
+  justify-content: space-between;
+  color: black;
+}
+.details .privacy span{
+  font-size: 13px;
+  margin-top: 1px;
+  font-weight: 500;
+  color: black;
+}
+.details .privacy i:last-child{
+  font-size: 13px;
+  margin-left: 1px;
+  color: black;
+}
+form :where(textarea, button){
+  width: 100%;
+  outline: none;
+  border: none;
+}
+form textarea{
+  resize: none;
+  font-size: 12px;
+  margin-top: 30px;
+  min-height: 25px;
+}
+form textarea::placeholder{
+  color: #858585;
+}
+form textarea:focus::placeholder{
+  color: #b3b3b3;
+}
+form :where(.theme-emoji, .options){
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.theme-emoji img:last-child{
+  max-width: 24px;
+}
+form .options{
+  height: 40px;
+  margin: 5px 0;
+  width: 100%;
+  padding: 0 15px;
+  border-radius: 7px;
+  border: 1px solid #B9B9B9;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+form .options :where(.list, li){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form .options p{
+  color: #595959;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: default;
+}
+form .options .list{
+  list-style: none;
+}
+.options .list li{
+  height: 42px;
+  width: 42px;
+  margin: 0 -1px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.options .list li:hover{
+  background: #f0f1f4;
+}
+.options .list li img{
+  width: 23px;
+}
+form button{
+  height: 40px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #BCC0C4;
+  cursor: no-drop;
+  border-radius: 7px;
+  background: #e2e5e9;
+  transition: all 0.3s ease;
+}
+form textarea:valid ~ button{
+  color: #fff;
+  cursor: pointer;
+  background: #4599FF;
+}
+form textarea:valid ~ button:hover{
+  background: #1a81ff;
+}
+.form{
+  background-color: black;
+  color: white;
+}
+.image-upload>input {
+  display: none;
+}
+.emojies{
+  display: none;
+  border: 1px solid black;
+  width: 30%;
+  height: auto;
+  background-color: black;
+}
+.scrolling-feeds{
+  border: none;
+  width: 100%;
+  height: auto;
+  margin: -30px 0%;
+  background-color: white;
+  border-radius: 10px;
+}
+.feeds p{
+  font-size: 12px;
+  color: black;
+  margin: -40px 3%;
+  font-family: Sofia sans-serif;
+}
+.feeds .like-box{
+  margin: 50px 0px 8px 3%;
+  width: 94%;
+  border: 1px solid black;
+  border-left: none;
+  border-right: none;
+}
+.feeds button {
+  background: #fff;
+  border: unset;
+  outline: 0;
+  font-size: 18px;
+  cursor: pointer;
+  color: #65676b;
+  padding: 5px 0px;
+  margin: 0px 8%;
+}
+.feeds button.liked {
+  color: #0571ed;
+}
+.feeds button.liked i{
+  animation: anim 0.5s ease-in-out;
+  -webkit-animation: anim 0.5s ease-in-out;
+}
+.container3{
+  display: flex;
+  align-items: left;
+  position: relative;
+  justify-content: left;
+  flex-direction: column;
+
+}
+.emoji{
+  width: 365px;
+  height: 70px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  transition: all 0.4s;
+  position: absolute;
+  transform: translatey(-115px);
+  margin: 0px 3%;
+  opacity: 0;
+  cursor: pointer;
+}
+.container3 .emoji::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 25%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: white solid;
+}
+.emoji .hello img{
+  transition: all 0.4s;
+  width: 50px;
+  height: 50px;
+  margin: 0px 6%;
+  justify-content: space-between;
+}
+.hello p{
+  position: absolute;
+  top: -10px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 4px 10px;
+  margin-left: 5px;
+  transition: all 0.2s;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 50px;
+}
+.hello:hover p{
+  visibility: visible;
+  opacity: 1;
+}
+.emoji:hover{
+  transform: translateY(1);
+  visibility: visible;
+  opacity: 1;
+}
+.emoji img:hover{
+  transform: translateY(-10%)scale(1.2);
+  filter: drop-shadow(0 1px 5px grey);
+}
+
+@keyframes anim {
+  100% {
+    transform: rotate(-15deg) scale(1.3);
+    -webkit-transform: rotate(-15deg) scale(1.3);
+    -moz-transform: rotate(-15deg) scale(1.3);
+    -ms-transform: rotate(-15deg) scale(1.3);
+    -o-transform: rotate(-15deg) scale(1.3);
+    filter: blur(0.5px);
+    -webkit-filter: blur(0.5px);
+  }
+}
+.hr button{
+  margin: -10px 0%;
+}
+.name p{
+  color: black;
+  margin: -50px 12%;
+  font-size: 17px;
+  font-weight: 500;
+}
+.name .indra{
+  margin: 55px 12%;
+  font-weight: 12px;
+  color: #000;
+  font-size: 12px;
+  width: 80px;
+  height: 20px;
+  align-items: center;
+}
+.feeds2 .name .indra{
+  display: flex;
+  height: 18px;
+  cursor: pointer;
+  padding: 0 10px;
+  font-size: 11px;
+  margin-top: 3px;
+  border-radius: 5px;
+  align-items: center;
+  max-width: 98px;
+  background: #E4E6EB;
+  justify-content: space-between;
+}
+.feeds2 img{
+  max-width: 42px;
+  border-radius: 50%;
+  margin: 5px 3%;
+}
+.feeds2 i{
+  color: black;
+  float: right;
+  margin: 10px 5%;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+}
+.threedots{
+  position: relative;
+  display: inline-block;
+}
+.threedotss {
+  display:none;
+  position: relative;
+  background-color: #f1f1f1;
+  min-width: 60px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin: -25px 615%;
+  text-align: center;
+}
+.threedotss a {
+  color: black;
+  text-decoration: none;
+  padding: 12px 16px;
+  display: block;
+  text-align: center;
+}
+.threedotss a:hover {background-color: #ddd;}
+
+.show {display: block;}
+.read-more-btn{
+  color: #0984e3;
+  cursor: pointer;
+}
+.read-more-btn{
+  color: #0984e3;
+  cursor: pointer;
+}
+.Read-more-text{
+  display: none;
+}
+.Read-more-text--show{
+  display: inline;
+}
+.feeds img{
+  width: 100%;
+  height: 300px;
+}
+#comment-box {
+  border: none;
+  border-radius: 5px;
+  margin: 0px 3%;
+  width: 80%;
+  height: 50px;
+  outline: none;
+  background-color: #efefef;
+}
+#post{
+  border: none;
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  background-color: #0000FF;
+  color: white;
+}
+#post:hover{
+  background-color: #0000FF;
+}
+#unordered{
+  margin: 0px 5%;
+  color: black;
+}
+
+/*-----------------------------------------RIGHT SIDEBAR-----------------------------------------*/
+.right-sidebar{
+  background-color: none;
+  border: 1px solid black;
+  float: right;
+  width: 300px;
+  height: 498px;
+  margin: -512px 1%;
+  display: block;
+  overflow: hidden;
+}
+.right-sidebar h2{
+  text-align: center;
+  color: black;
+  background-color: rgb(12, 161, 87);
+  width: 100%;
+  height: 50px;
+  padding: 10px 0%;
+  border-bottom:1px solid grey ;
+  position: relative;
+  overflow: hidden;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.right{
+  background-color: white;
+  overflow: auto;
+}
+.right p{
+  text-align: center;
+  color: black;
+}
+.right p:hover{
+  background-color: #444;
+  color: white;
+}
+
+.message img{
+  float: right;
+  margin: -150px 0.5%;
+  z-index: 1;
+  width: 65px;
+  height: 65px;
+  position: relative;
+  cursor: pointer;
+}
+.international-affair img{
+  float: right;
+  margin: -80px 0.9%;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border:1px solid white;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+.pops-up span{
+  float: right;
+  margin: -80px 5%;
+  z-index: 1;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  position: relative;
+  border:1px solid white;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.pops-up span h4{
+  text-align: center;
+  background-color: red;
+  width: 20px;
+  height: 50px;
+  float: right;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 14px 2px;
+  font-size: 20px;
+}
+.pops-up .open-button {
+  background-color: #555;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  bottom: 23px;
+  right: 28px;
+  width: 178px;
+  height: 50px;
+  margin: 0px 0%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+/*-------------------------------------FOOTER---------------------------------*/
+.footer{
+  width: 98%;
+  height: 30px;
+  background-color: green;
+  margin: -5px 1%;
+  font-family: comic sans ms;
+}
+.footer h3{
+  text-align: center;
+  margin: 0px 25%;
+  color: white;
+}
+.footer b{
+  color: orange;
+  cursor: pointer;
+}
+</style>
+<body>
+  <header>
+    <img src="./images/flag.jpg" style="width:50px; height: 50px;">
+    <h2>Bhutanese student in Assam Down Town University</h2>
+    <p>Panikhati, Guwahati-26</p>
+  </header>
+    <!-------------------------------------------------------------NAVBAR-------------------------------------------------------------->
+    <div class="box">
+        <div class="topnav" id="myTopnav">
+            <a href="index.html" class="active">Home</a>
+            <a href="students.html">Students</a>
+            <div class="dropdown">
+                <button id="myBtn" class="dropbtn">Contact</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="https://wa.me/+919127070577">International Affair</a>
+                    <a href="https://www.mfa.gov.bt/rbcguwahati/consular-services/">RBCG</a>
+                    <a href="https://www.facebook.com/reskod.pokhrel">President</a>
+                    <a href="https://www.facebook.com/dilliram.dhamala.33">Vice-President</a>
+                    <a href="students.html">Other Students</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button id="myBtn" class="dropbtn">Scholarship</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="https://www.indembthimphu.gov.in/pages.php?id=102">Ambassador's Scholarship</a>
+                </div>
+            </div>
+            <a href="course.html">Course</a>
+            <button><a href="sign-up.html">Sign up</a></button>
+            <button><a href="signin.html">Sign in</a></button>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+        <!-----------------------------------------------END OF NAVBAR------------------------------------------------------------->
+        
+        <!--------------------------------------------STARTING OF LEFT SIDEBAR----------------------------------------------------->
+        <div class="left-sidebar">
+            <h1>INFORMATION</h1>
+            <div class="Navigation-btn">
+              <div class="scroll-parent">
+                <div class="scroll-element secondary">
+                    <div class="notice">
+                            <p><b>10 Oct 2022</b> Fees Payment Circular October 2022</p>
+                        </div>
+                        <div class="notice1">
+                            <p><b>28 Sep 2022</b> Notification-DRA-II-NO SUSPENSION OF SCHEDULED CLASSES</p>
+                        </div>
+                        <div class="notice2">
+                            <p><b>27 Sep 2022</b>CIRCULAR - Student nomination for Anti-Drug </p>
+                        </div>
+                        <div class="notice3">
+                            <p><b>10 Oct 2022</b> Fees Payment Circular October 2022</p>
+                        </div>
+                        <div class="notice4">
+                            <p><b>10 Oct 2022</b> Fees Payment Circular October 2022</p>
+                        </div>
+                        <div class="notice5">
+                            <p><b>10 Oct 2022</b> Fees Payment Circular October 2022</p>
+                        </div>
+                        <div class="notice6">
+                            <p><b>10 Oct 2022</b> Fees Payment Circular October 2022</p>
+                        </div>
+                        <div class="notice7">
+                            <p><b>10 Oct 2022</b> Fees Payment Circular October 2022</p>
+                        </div>
+                        <div class="notice8">
+                            <p><b>10 Oct 2022</b> Fees Payment Circular October 2022</p>
+                        </div>
+                        <div class="notice9">
+                            <p><b>10 Oct 2022</b> Fees Payment Circular October 2022</p>
+                        </div>
+                        <div class="notice10">
+                            <p><b>10 Oct 2022</b> Fees Payment Circular October 2022</p>
+                        </div>
+                        <div class="notice11">
+                            <p><b>10 Oct 2022</b> Fees Payment Circular October 2022</p>
+                        </div>
+                        <div class="notice12">
+                            <p><b>10 Oct 2022</b> Fees Payment Circular October 2022</p>
+                        </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!----------------------------------------------------------------END OF LEFT SIDEBAR--------------------------------------------------->
+
+        <!----------------------------------------------------------------MAIN CONTENT---------------------------------------------------------->
+        <div class="main-content">
+            <h2><br>New Feeds</h2>
+            <hr>
+            <div class="container" style="background:white;margin: 0px 0%;">
+                <div class="wrapper">
+                    <section class="post">
+                        <form action="scrolling-feeds">
+                            <div class="content">
+                                <img src="./images/profile-1.jpg" alt="logo">
+                                <div class="details">
+                                    <p>Bsi-Adtu</p>
+                                    <div class="privacy">
+                                        <i class="fas fa-user-friends"></i>
+                                        <span>student</span>
+                                        <i class="fas fa-caret-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <textarea placeholder="What's on your mind, Bsi-Adtu?" spellcheck="false" required></textarea>
+                            <div class="theme-emoji">
+                                <img src="./icons/theme.svg" alt="theme">
+                                <img src="./icons/smile.svg" alt="smile">
+                            </div>
+                            <div class="options">
+                                <p>Add to Your Post</p>
+                                <ul class="list">
+                                    <div class="image-upload">
+                                        <label for="file-input">
+                                            <li><img src="icons/gallery.svg" alt="gallery"></li>
+                                        </label>
+                                        <input id="file-input" type="file" />
+                                    </div>
+                                    <li><img src="icons/tag.svg" alt="gallery"></li>
+                                    <li><img src="icons/emoji.svg" alt="gallery"></li>
+                                    <li><img src="icons/mic.svg" alt="gallery"></li>
+                                    <li><img src="icons/more.svg" alt="gallery"></li>
+                                </ul>
+                            </div>
+                            <button id="display" onclick="display()">Post</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+            <br><br><br>
+
+            <!----------------DISPLAYING THE UPLOADED ITEMS---------------->
+            <div class="scrolling-feeds">
+                <div class="feeds2">
+                    <img src="./images/profile-1.jpg">
+                    <i onclick="myFunction()"class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div class="name">
+                    <p>Bsi-Adtu</p>
+                    <div class="indra">
+                        <i class="fas fa-user-friends"></i>
+                        <span>student</span>
+                        <i class="fas fa-caret-down"></i>
+
+                        <!--------DELETE BUTTON--------------->
+                        <div id="threedots" class="threedotss">
+                            <a href="#"> Delete</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="feeds">
+                    <p>Assam down town University (AdtU) is one of the leading universities of North East India, offering its students an unique amalgamation of professional and academic excellence.
+                        <span class="Read-more-text">
+                            ⚡Admissions Open 2022-23 | 🤙Call 98641 37777 / 93657 71454<br>
+                            🌐 www.adtu.in | 📧 admission@adtu.in<br>
+                            ✅ Recognized by UGC, NAAC, AICTE, INC & PCI<br>
+                            ✅ Highly Qualified & Experienced Faculty<br>
+                            ✅ 50 Acre Eco-Friendly Green Campus<br>
+                            ✅ Placement Assistance with over 85% Placement Record<br>
+                            ✅ Up to 100% Scholarship<br>
+                            ✅ 24/7 E-Library<br>
+                            ✅ 70+ labs<br>
+                            ✅ 60+ programmes<br>
+                            ✅ Practical Exposure
+                            ✅ Research-focused curriculum<br>
+                            ✅ Industry-Relevant programmes<br>
+                            ✅ AWS campus
+                        </span>
+                        <span class="read-more-btn">Read More...</span>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Assam_down_town_university_amphitheater.jpg">
+                    </p>
+
+                    <!----------LIKE BUTTON----------->
+                    <div class="like-box">
+                        <button id="like" onclick="liked()">
+                            <i class="fa fa-thumbs-up"></i>
+                            <span class="icon1">Like</span>
+                        </button>
+
+                        <!-------------COMMENT BUTTON--------------->
+                        <button id="comment" onclick="Comment()">
+                            <i class="fa-solid fa-message"></i>
+                            <span class="icon">Comment</span>
+                        </button>
+
+                        <!-------------SHARE BUTTON--------------->
+                        <button id="share" onclick="share()">
+                            <i class="fa-solid fa-share"></i>
+                            <span class="icon">Share</span>
+                        </button>
+                    </div>
+
+                    <!--------------ADDING EMOJIES---------------------------->
+                    <div class="container3">
+                        <div class="emoji">
+                            <div class="hello">
+                                <img src="./icons/like.gif" alt="">
+                                <p>Like</p>
+                            </div>
+                            <div class="hello">
+                                <img src="./icons/love.gif" alt="">
+                                <p>Love</p>
+                            </div>
+                            <div class="hello">
+                                <img src="https://media.tenor.com/RU2fB3PWq_8AAAAM/take-care.gif" alt="">
+                                <p>Care</p>
+                            </div>
+                            <div class="hello">
+                                <img src="./icons/haha.gif" alt="">
+                                <p>Haha</p>
+                            </div>
+                            <div class="hello">
+                                <img src="./icons/wow.png" alt="">
+                                <p>wow</p>
+                            </div>
+                            <div class="hello">
+                                <img src="./icons/crying-face_1f622.png" alt="">
+                                <p>Sad</p>
+                            </div>
+                            <div class="hello">
+                                <img src="./icons/angry-face_1f620.png" alt="">
+                                <p>Angry</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-------------DISPLAYING THE COMMENT WE POST------------------>
+                <ul id="unordered"></ul>
+
+                <!------------INPUT FIELD TO TYPE COMMENTS--------------------->
+                <input type="text" id="comment-box" placeholder="Enter comment" style="padding:5px">
+                <button id="post">Post</button>
+                <br><br>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------------------------RIGHT SIDEBAR---------------------------------------------------------------------->
+    <div class="right-sidebar">
+      <h2>Recognized universities</h2>
+      <div class="Navigation-btn">
+        <div class="scroll-parent">
+          <div class="scroll-element secondary">
+              <div class="notice">
+                      <p><b>10 Oct 2022</b> Fees Payment Circular October 2022</p>
+                  </div>
+                  <div class="notice1">
+                      <p><b>28 Sep 2022</b> Notification-DRA-II-NO SUSPENSION OF SCHEDULED CLASSES</p>
+                  </div>
+                  <div class="notice2">
+                      <p><b>27 Sep 2022</b>CIRCULAR - Student nomination for Anti-Drug </p>
+                  </div>
+                  <div class="notice3">
+                      <p><b>10 Oct 2022</b> Fees Payment Circular October 2022</p>
+                  </div>
+                  <div class="notice4">
+                      <p><b>10 Oct 2022</b> Fees Payment Circular October 2022</p>
+                  </div>
+                  <div class="notice5">
+                      <p><b>10 Oct 2022</b> Fees Payment Circular October 2022</p>
+                  </div>
+                  <div class="notice6">
+                      <p><b>10 Oct 2022</b> Fees Payment Circular October 2022</p>
+                  </div>
+                  <div class="notice7">
+                      <p><b>10 Oct 2022</b> Fees Payment Circular October 2022</p>
+                  </div>
+                  <div class="notice8">
+                      <p><b>10 Oct 2022</b> Fees Payment Circular October 2022</p>
+                  </div>
+                  <div class="notice9">
+                      <p><b>10 Oct 2022</b> Fees Payment Circular October 2022</p>
+                  </div>
+                  <div class="notice10">
+                      <p><b>10 Oct 2022</b> Fees Payment Circular October 2022</p>
+                  </div>
+                  <div class="notice11">
+                      <p><b>10 Oct 2022</b> Fees Payment Circular October 2022</p>
+                  </div>
+                  <div class="notice12">
+                      <p><b>10 Oct 2022</b> Fees Payment Circular October 2022</p>
+                  </div>
+          </div>
+        </div>
+      </div>
+  </div>
+    <div class="message">
+      <a href="https://wa.me/+919127070577"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png"></a>
+    </div>
+    <div class="international-affair">
+      <img src="https://www.imagediamond.com/blog/wp-content/uploads/2020/06/cartoon-girl-images.jpg">
+    </div>
+    
+    <div class="pops-up">
+      <span onclick="style.display='none'" style="cursor:pointer;"
+      class="pops-up"><h4>✕</h4> <button class="open-button" onclick="openForm()">Hello! How can I help you?click here to chat</button></span>
+      <div class="chat-popup" id="myForm">
+        <form action="https://wa.me/+919127070577" class="form-container">
+          <h1>Chat</h1>
+          <label for="msg"><b>With Tanaya Deka</b></label>
+          <textarea placeholder="Type message.." name="msg" required></textarea>
+          <button type="submit" class="btn">Send</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+    </div>
+
+    <!-------------------------------FOOTER------------------------------------------->
+    <div class="footer">
+        <h3>
+            Copyright &copy; 2022 by <b>Indra Adhikari </b>
+        </h3>
+    </div>
+
+    <!---------------------------------------------------------------JAVASCRIPT------------------------------------------------------------>
+    <script>
+    /*----------read more and readless-------------*/
+    const parentcontainer =document.querySelector('.feeds');
+    parentcontainer.addEventListener('click', event=>{
+        const current = event.target;
+        const isReadMoreBtn = current.className.includes('read-more-btn');
+        if(!isReadMoreBtn)return;
+        const currentText = event.target.parentNode.querySelector('.Read-more-text');
+        currentText.classList.toggle('Read-more-text--show');
+        current.textContent = current.textContent.includes('Read More')? "Read Less...": "Read More...";
+    });
+
+    /*------------active onclicked-----------------------*/
+    var btns = document.querySelectorAll(".notice");
+    Array.from(btns).forEach(item => {
+        item.addEventListener("click", () => {
+            var selected = document.getElementsByClassName("active");
+            selected[0].className = selected[0].className.replace(" active", "");
+            item.className += " active";
+      });
+   });
+   
+   document.getElementById("myBtn").onclick = function() {myFunction()};
+   function myFunction()
+   {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+
+$(document).ready(function(){
+    $(".primaryContained").on('click', function(){
+        $(".comment").addClass("commentClicked");
+    });
+    $("textarea").on('keyup.enter', function(){
+        $(".comment").addClass("commentClicked");
+    });
+});
+
+new Vue({
+    el: "#app",
+    data:{
+        title: 'Add a comment',
+        newItem: '',
+        item: [],
+    },
+    methods:{
+        addItem  (){
+            this.item.push(this.newItem);
+            this.newItem = "";
+        }
+    }
+});
+
+   
+function liked(){
+  var element = document.getElementById("like");
+  element.classList.toggle("liked");
+}
+
+var post= document.getElementById("post");
+post.addEventListener("click", function(){
+    var commentBoxValue= document.getElementById("comment-box").value;
+ 
+    var li = document.createElement("li");
+    var text = document.createTextNode(commentBoxValue);
+    li.appendChild(text);
+    document.getElementById("unordered").appendChild(li);
+ 
+});
+
+function myFunction() {
+  document.getElementById("threedots").classList.toggle("show");
+}
+
+    function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+</body>
+</html>
